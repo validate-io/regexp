@@ -19,15 +19,17 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-regexp' );
+var isRegexp = require( 'validate.io-regexp' );
+
+console.log( isRegexp( /\.+/ ) );
+// Returns true
+
+console.log( isRegexp( '/\.+/' ) );
+// Returns false
 ```
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-regexp' );
-```
 
 To run the example code from the top-level application directory,
 
