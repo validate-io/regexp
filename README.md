@@ -16,20 +16,31 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var isRegexp = require( 'validate.io-regexp' );
+```
 
-console.log( isRegexp( /\.+/ ) );
-// Returns true
+### isRegexp( value )
 
-console.log( isRegexp( '/\.+/' ) );
-// Returns false
+Validates if a `value` is a regular expression.
+
+``` javascript
+var value = /\.+/;
+
+var bool = isRegexp( value );
+// returns true
 ```
 
 
 ## Examples
+
+``` javascript
+console.log( isRegexp( /\.+/ ) );
+// returns true
+
+console.log( isRegexp( '/\.+/' ) );
+// returns false
+```
 
 To run the example code from the top-level application directory,
 
@@ -42,7 +53,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -62,16 +73,16 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.

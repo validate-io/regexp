@@ -1,7 +1,9 @@
+'use strict';
+
 var isRegexp = require( './../lib' );
 
 console.log( isRegexp( /\.+/ ) );
-// Returns true
+// returns true
 
 console.log( isRegexp( '/\.+/' ) );
-// Returns false
+// returns false

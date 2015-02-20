@@ -1,3 +1,5 @@
+/* global require, describe, it */
+'use strict';
 
 // MODULES //
 
@@ -17,7 +19,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'validate.io-regexp', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( isRegexp ).to.be.a( 'function' );
@@ -25,20 +26,21 @@ describe( 'validate.io-regexp', function tests() {
 
 	it( 'should positively validate', function test() {
 		assert.ok( isRegexp( /\.+/ ) );
+		assert.ok( isRegexp( new RegExp( '\.+' ) ) );
 	});
 
 	it( 'should negatively validate', function test() {
 		var values = [
-				5,
-				[],
-				'5',
-				'/\.+/',
-				function(){},
-				null,
-				NaN,
-				{},
-				undefined
-			];
+			5,
+			[],
+			'5',
+			'/\.+/',
+			function(){},
+			null,
+			NaN,
+			{},
+			undefined
+		];
 
 		for ( var i = 0; i < values.length; i++ ) {
 			assert.ok( !isRegexp( values[i] ) );
