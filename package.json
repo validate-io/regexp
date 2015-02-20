@@ -30,7 +30,13 @@
     "valid",
     "regular expression",
     "regexp",
-    "regex"
+    "regex",
+    "is",
+    "type",
+    "check",
+    "instanceof",
+    "isregexp",
+    "isregex"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/regexp/issues"
